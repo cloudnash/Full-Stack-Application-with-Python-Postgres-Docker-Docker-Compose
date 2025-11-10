@@ -7,7 +7,7 @@ This project is a simple **Full Stack CRUD App** using:
 - **Postgres** database
 - **Streamlit** frontend
 - **Docker Compose** for container orchestration
-- **Jenkins** for CI/CD automation (triggered by GitHub webhook)
+- **Jenkins** for CI/CD automation (triggered by GitHub webhook) //OPTIONAL BONUS
 
 ## Prereqs
 - Docker & Docker Compose installed
@@ -42,7 +42,7 @@ API docs available at http://localhost:8000/docs (FastAPI automatic swagger).
 | Frontend | Streamlit |
 | Backend | FastAPI |
 | Database | PostgreSQL |
-| CI/CD | Jenkins |
+| *optional* CI/CD | Jenkins |
 | Orchestration | Docker Compose |
 
 ## How to Run
