@@ -1,6 +1,6 @@
 # Full-Stack-Application-with-Python-Postgres-Docker-Docker-Compose
-
-# Full Stack DevOps Application
+ 
+Full Stack DevOps Application
 
 This project is a simple **Full Stack CRUD App** using:
 - **FastAPI** backend - – RESTful CRUD APIs for Users, Projects, and Tasks
@@ -9,7 +9,7 @@ This project is a simple **Full Stack CRUD App** using:
 - **Docker Compose** for container orchestration - Each service (backend, frontend, database) runs in its own container 
 - **Jenkins** for CI/CD automation (triggered by GitHub webhook) //OPTIONAL BONUS
 
-## 🧱 Architecture
+## Architecture
 
 ```
 📦 fullstack-devops-assignment/
@@ -100,6 +100,9 @@ Optional CI/CD integration for DevOps demonstration
 ## Author
 
 Nashit Ahmad
+
 DevOps | Cloud | AWS
+
 📧 nashitakerfeldt@gamil.com
+
 🌐 https://in.linkedin.com/in/nashitahmad
