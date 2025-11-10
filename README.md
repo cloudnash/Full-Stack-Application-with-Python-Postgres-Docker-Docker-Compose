@@ -89,7 +89,7 @@ It demonstrates end-to-end CI/CD integration using Jenkins.
 | Orchestration | Docker Compose |
 
 
-##Key Takeaways
+## Key Takeaways
 
 Clean modular Python backend with RESTful APIs
 Persistent Postgres DB
