@@ -29,7 +29,7 @@ Postgres data is stored in docker volume `db_data`.
 - run migrations (if using alembic): see `backend/alembic`
 
 ## CI
-See .github/workflows/ci.yml for GitHub Actions to build and test images.
+Jenkins Auotmation tool used for pipleline
 
 
 ```
