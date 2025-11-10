@@ -27,6 +27,8 @@ This will build 3 services:
 Open http://localhost:3000 to use the UI.
 API docs available at http://localhost:8000/docs (FastAPI automatic swagger).
 
+*Images of webpage also added in Image directory.*
+
 ## Useful commands
 - tail backend logs: `docker compose logs -f backend`
 - run shell in backend container: `docker compose exec backend /bin/sh`
