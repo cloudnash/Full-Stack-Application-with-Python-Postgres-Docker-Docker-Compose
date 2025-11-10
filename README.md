@@ -59,13 +59,17 @@ docker-compose up -d
  fullstack-devops-app/
 ├── backend/
 │   ├── Dockerfile
-│   ├── main.py
-│   ├── models.py
-│   ├── database.py
+│   ├── app/
+│   │   ├── main.py
+│   │   ├── models.py
+│   │   ├── crud.py
+│   │   ├── schema.py
+│   │   └── database.py
 │   └── requirements.txt
 ├── frontend/
 │   ├── Dockerfile
-│   └── app.py
+│   └── dist/
+│       └── index.html   ← this is your frontend
 ├── docker-compose.yml
 ├── Jenkinsfile
 └── README.md
