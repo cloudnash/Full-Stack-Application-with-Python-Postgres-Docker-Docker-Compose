@@ -1,0 +1,1 @@
+# Full-Stack-Application-with-Python-Postgres-Docker-Docker-Compose
