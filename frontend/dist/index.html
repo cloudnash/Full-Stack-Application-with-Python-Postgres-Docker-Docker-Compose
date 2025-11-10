@@ -1,0 +1,38 @@
+<!-- frontend/dist/index.html -->
+<!doctype html>
+<html>
+  <head><meta charset="utf-8"><title>Fullstack Demo</title></head>
+  <body style="font-family: Arial;">
+    <h1>Fullstack DevOps Demo</h1>
+    <div>
+      <button onclick="createSample()">Create sample user/project/task</button>
+      <button onclick="loadTasks()">Load tasks (join)</button>
+    </div>
+    <pre id="out"></pre>
+
+    <script>
+      const API = "http://localhost:8000";
+      async function createSample() {
+        await fetch(API + "/users/", {
+          method: "POST", headers: {"Content-Type":"application/json"},
+          body: JSON.stringify({name:"Alice", email:"alice@example.com"})
+        });
+        await fetch(API + "/projects/", {
+          method: "POST", headers: {"Content-Type":"application/json"},
+          body: JSON.stringify({name:"ProjA", description:"demo"})
+        });
+        // assume id 1 for both
+        await fetch(API + "/tasks/", {
+          method: "POST", headers: {"Content-Type":"application/json"},
+          body: JSON.stringify({title:"Task1", project_id:1, assignee_id:1})
+        });
+        document.getElementById("out").innerText = "Sample created";
+      }
+      async function loadTasks() {
+        const r = await fetch(API + "/tasks/details");
+        const json = await r.json();
+        document.getElementById("out").innerText = JSON.stringify(json, null, 2);
+      }
+    </script>
+  </body>
+</html>
