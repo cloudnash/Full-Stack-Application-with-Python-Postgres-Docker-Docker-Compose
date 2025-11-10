@@ -1,4 +1,4 @@
-# COPY THIS: backend/app/models.py
+# backend/app/models.py
 from sqlalchemy import Column, Integer, String, ForeignKey, Text
 from sqlalchemy.orm import relationship
 from .database import Base
