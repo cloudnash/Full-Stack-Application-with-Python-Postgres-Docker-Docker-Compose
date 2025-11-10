@@ -1,6 +1,13 @@
 # Full-Stack-Application-with-Python-Postgres-Docker-Docker-Compose
 
-# Fullstack DevOps Assignment
+# Full Stack DevOps Application
+
+This project is a simple **Full Stack CRUD App** using:
+- **FastAPI** backend
+- **Postgres** database
+- **Streamlit** frontend
+- **Docker Compose** for container orchestration
+- **Jenkins** for CI/CD automation (triggered by GitHub webhook)
 
 ## Prereqs
 - Docker & Docker Compose installed
@@ -20,47 +27,48 @@ This will build 3 services:
 Open http://localhost:3000 to use the UI.
 API docs available at http://localhost:8000/docs (FastAPI automatic swagger).
 
-## Persisted data
-Postgres data is stored in docker volume `db_data`.
-
 ## Useful commands
 - tail backend logs: `docker compose logs -f backend`
 - run shell in backend container: `docker compose exec backend /bin/sh`
 - run migrations (if using alembic): see `backend/alembic`
 
-## CI
-Jenkins Auotmation tool used for pipleline
+
+## Architecture
+![Architecture](docs/architecture-diagram.png)
+
+### Tech Stack
+| Layer | Technology |
+|-------|-------------|
+| Frontend | Streamlit |
+| Backend | FastAPI |
+| Database | PostgreSQL |
+| CI/CD | Jenkins |
+| Orchestration | Docker Compose |
+
+## How to Run
+
+```bash
+git clone https://github.com/<your-username>/fullstack-devops-app.git
+cd fullstack-devops-app
+docker-compose up -d
+```
 
 
 ```
-fullstack-devops-assignment/
-├─ backend/
-│  ├─ app/
-│  │  ├─ main.py
-│  │  ├─ models.py
-│  │  ├─ schemas.py
-│  │  ├─ crud.py
-│  │  ├─ database.py
-│  │  └─ config.py
-│  ├─ requirements.txt
-│  ├─ Dockerfile
-│  └─ start.sh
-├─ frontend/
-│  ├─ package.json
-│  ├─ Dockerfile
-│  └─ src/
-│     ├─ App.js
-│     ├─ index.js
-│     ├─ api.js
-│     ├─ components/
-│        ├─ Users.js
-│        ├─ Projects.js
-│        └─ Tasks.js
-├─ docker-compose.yml
-├─ .env
-├─ README.md
-└─ .github/
-   └─ workflows/
-      └─ ci.yml
+📦 fullstack-devops-assignment/
+ fullstack-devops-app/
+├── backend/
+│   ├── Dockerfile
+│   ├── main.py
+│   ├── models.py
+│   ├── database.py
+│   └── requirements.txt
+├── frontend/
+│   ├── Dockerfile
+│   └── app.py
+├── docker-compose.yml
+├── Jenkinsfile
+└── README.md
+
 
 ```
